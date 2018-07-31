@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [[ $TRAVIS_OS_NAME == "osx" ]]; then
+    xcode-select --install
     rm '/usr/local/include/c++'
 #    brew cask uninstall oclint  #  reserve variant to deal with conflict link
     if [[ $TASK == "mpi" ]]; then
